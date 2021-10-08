@@ -5,11 +5,11 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         try {
-            //Sistema.cadastrarCliente();
-            //Sistema.cadastrarCliente();
+            Sistema.cadastrarCliente();
+            Sistema.cadastrarCliente();
 
-            Sistema.cadastrarVendedor();
-            Sistema.cadastrarVendedor();
+            //Sistema.cadastrarVendedor();
+            //Sistema.cadastrarVendedor();
 
             //Sistema.cadastrarVenda();
             //Sistema.cadastrarVenda();
