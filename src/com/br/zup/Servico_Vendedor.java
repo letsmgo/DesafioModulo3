@@ -24,5 +24,15 @@ public class Servico_Vendedor {
         return exibirVendedores;
     }
 
+    //-----------------------------------MÉTODO PARA VERIFICAR SE O VENDEDOR ESTÁ CADASTRADO
+    public static Vendedor validarVendedor(String email) throws Exception{
+        for (Vendedor vendedorReferencia : vendedores) {
+            if (vendedorReferencia.getEmail().equalsIgnoreCase(email)){
+                return vendedorReferencia;
+            }
+        }
+        throw new Exception("Vendedor não cadastrado! Vamos tentar novamente?");
+    }
+
 
 }
