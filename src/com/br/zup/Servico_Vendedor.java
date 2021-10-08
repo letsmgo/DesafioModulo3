@@ -16,9 +16,18 @@ public class Servico_Vendedor {
 
     //-----------------------------------MÉTODO PARA VALIDAR SE O CPF DO VENDEDOR JÁ FOI CADASTRADO E NÃO TER DUPLICIDADE
     public static void verificarDuplicidadeVendedores(String cpf) throws Exception{
-        for (Vendedor clienteReferencia : vendedores) {
-            if (clienteReferencia.getCpf().equalsIgnoreCase(cpf)){
+        for (Vendedor vendedorReferencia : vendedores) {
+            if (vendedorReferencia.getCpf().equalsIgnoreCase(cpf)){
                 throw new Exception("CPF já cadastrado. Você digitou algo errado, vamos tentar novamente?");
+            }
+        }
+    }
+
+    //-----------------------------------MÉTODO PARA VALIDAR SE O E-MAIL DO VENDEDOR JÁ FOI CADASTRADO E NÃO TER DUPLICIDADE
+    public static void verificarDuplicidadeEmail(String email) throws Exception{
+        for (Vendedor vendedorReferencia : vendedores) {
+            if (vendedorReferencia.getEmail().equalsIgnoreCase(email)){
+                throw new Exception("E-mail já cadastrado, digite outro endereço de e-mail.");
             }
         }
     }
@@ -26,6 +35,7 @@ public class Servico_Vendedor {
     //-----------------------------------MÉTODO PARA CADASTRAR UM VENDEDOR
     public static Vendedor cadastrarVendedor(String nome, String matricula, String cpf, String email) throws Exception{
         validarEmailVendedor(email);
+        verificarDuplicidadeEmail(email);
         verificarDuplicidadeVendedores(cpf);
         Vendedor vendedor = new Vendedor(nome, matricula, cpf, email);
         vendedores.add(vendedor);
