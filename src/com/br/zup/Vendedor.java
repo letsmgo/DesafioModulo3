@@ -4,13 +4,13 @@ public class Vendedor {
     //---------------------------------------------------ATRIBUTOS
     private String nome;
     private String matricula;
-    private String ctps;
+    private String email;
 
     //---------------------------------------------------MÉTODO CONSTRUTOR
-    public Vendedor(String nome, String matricula, String ctps) {
+    public Vendedor(String nome, String matricula, String email) {
         this.nome = nome;
         this.matricula = matricula;
-        this.ctps = ctps;
+        this.email = email;
     }
 
     //---------------------------------------------------GETTERS AND SETTERS
@@ -30,12 +30,12 @@ public class Vendedor {
         this.matricula = matricula;
     }
 
-    public String getCtps() {
-        return ctps;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCtps(String ctps) {
-        this.ctps = ctps;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     //---------------------------------------------------toString
@@ -45,7 +45,7 @@ public class Vendedor {
         StringBuilder dados = new StringBuilder();
         dados.append("\nNome do vendedor: " + nome);
         dados.append("\nMatrícula: " + matricula);
-        dados.append("\nNúmero da CTPS: " + ctps);
+        dados.append("\nNúmero da CTPS: " + email);
 
         return dados.toString();
     }
