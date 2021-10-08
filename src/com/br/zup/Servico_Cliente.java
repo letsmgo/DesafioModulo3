@@ -7,8 +7,16 @@ public class Servico_Cliente {
     //-----------------------------------Atributo responsável por criar a lista de clientes
     private static List<Cliente> clientes = new ArrayList<>();
 
+    //-----------------------------------MÉTODO PARA VALIDAR E-MAILS
+    public static void validarEmail(String email) throws Exception{
+        if (!email.contains("@")){
+            throw new Exception("E-mail inválido! Vamos tentar novamente?");
+        }
+    }
+
     //-----------------------------------MÉTODO PARA CADASTRAR UM CLIENTE
-    public static Cliente cadastrarCliente(String nome, String cpf, String email){
+    public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception{
+        validarEmail(email);
         Cliente cliente = new Cliente(nome, cpf, email);
          clientes.add(cliente);
 

@@ -10,7 +10,7 @@ public class Sistema {
     }
 
     //-------------------------------------------------MÉTODO PARA CADASTRAR UM CLIENTE
-    public static Cliente cadastrarCliente(){
+    public static Cliente cadastrarCliente() throws Exception{
         String nome = capturarDados("Digite o nome completo do cliente: ").nextLine();
         String cpf = capturarDados("Digite o CPF do cliente: ").nextLine();
         String email = capturarDados("Digite o email do cliente: ").nextLine();
