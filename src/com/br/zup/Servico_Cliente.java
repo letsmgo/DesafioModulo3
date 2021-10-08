@@ -15,4 +15,14 @@ public class Servico_Cliente {
          return cliente;
     }
 
+    //-----------------------------------MÉTODO PARA EXIBIR LISTA DE CLIENTE
+    public static List<Cliente> motrarListaDeClientes(){
+        List<Cliente> exibirClientes = new ArrayList<>();
+        for (Cliente clienteReferencia : clientes) {
+            exibirClientes.add(clienteReferencia);
+        }
+
+        return exibirClientes;
+    }
+
 }
