@@ -16,8 +16,6 @@ public class Venda {
     }
 
     //---------------------------------------------------GETTERS AND SETTERS
-
-
     public double getValorASerPago() {
         return valorASerPago;
     }

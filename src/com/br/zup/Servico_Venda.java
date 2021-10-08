@@ -18,7 +18,14 @@ public class Servico_Venda {
         return venda;
     }
 
-
+    //-----------------------------------MÉTODO PARA EXIBIR UMA VENDA
+    public static List<Venda> mostrasVendas(){
+        List<Venda> exibirVendas = new ArrayList<>();
+        for (Venda vendaReferencia : vendas) {
+            exibirVendas.add(vendaReferencia);
+        }
+        return exibirVendas;
+    }
 
 
 
