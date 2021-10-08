@@ -23,9 +23,10 @@ public class Sistema {
     public static Vendedor cadastrarVendedor() throws Exception{
         String nome = capturarDados("Digite o nome do vendedor: ").nextLine();
         String matricula = capturarDados("Digite a matrícula do vendedor: ").nextLine();
+        String cpf = capturarDados("Digite o CPF do vendedor: ").nextLine();
         String email = capturarDados("Digite o e-mail do vendedor: ").nextLine();
 
-        return Servico_Vendedor.cadastrarVendedor(nome, matricula, email);
+        return Servico_Vendedor.cadastrarVendedor(nome, matricula, cpf, email);
     }
 
 
