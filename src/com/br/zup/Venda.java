@@ -16,21 +16,7 @@ public class Venda {
     }
 
     //---------------------------------------------------GETTERS AND SETTERS
-    public Cliente getCliente() {
-        return cliente;
-    }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public Vendedor getVendedorResponsavel() {
-        return vendedorResponsavel;
-    }
-
-    public void setVendedorResponsavel(Vendedor vendedorResponsavel) {
-        this.vendedorResponsavel = vendedorResponsavel;
-    }
 
     public double getValorASerPago() {
         return valorASerPago;

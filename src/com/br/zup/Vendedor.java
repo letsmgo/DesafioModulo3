@@ -45,7 +45,7 @@ public class Vendedor {
         StringBuilder dados = new StringBuilder();
         dados.append("\nNome do vendedor: " + nome);
         dados.append("\nMatrícula: " + matricula);
-        dados.append("\nNúmero da CTPS: " + email);
+        dados.append("\nE-mail do vendedor: " + email);
 
         return dados.toString();
     }
