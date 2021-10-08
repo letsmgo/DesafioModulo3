@@ -14,4 +14,15 @@ public class Servico_Vendedor {
 
         return vendedor;
     }
+
+    //-----------------------------------MÉTODO PARA EXIBIR LISTA DE VENDEDORES
+    public static List<Vendedor> mostrarListaDeVendedores(){
+        List<Vendedor> exibirVendedores = new ArrayList<>();
+        for (Vendedor vendedorReferencia : vendedores) {
+            exibirVendedores.add(vendedorReferencia);
+        }
+        return exibirVendedores;
+    }
+
+
 }
