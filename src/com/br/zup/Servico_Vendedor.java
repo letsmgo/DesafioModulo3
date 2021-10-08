@@ -8,7 +8,15 @@ public class Servico_Vendedor {
     private static List<Vendedor> vendedores = new ArrayList<>();
 
     //-----------------------------------MÉTODO PARA CADASTRAR UM VENDEDOR
-    public static Vendedor cadastrarVendedor(String nome, String matricula, String email){
+    public static void validarEmailVendedor(String email) throws Exception{
+        if (!email.contains("@")){
+            throw new Exception("E-mail do vendedor é inválido, vamos tentar novamente? ");
+        }
+    }
+
+    //-----------------------------------MÉTODO PARA CADASTRAR UM VENDEDOR
+    public static Vendedor cadastrarVendedor(String nome, String matricula, String email) throws Exception{
+        validarEmailVendedor(email);
         Vendedor vendedor = new Vendedor(nome, matricula, email);
         vendedores.add(vendedor);
 

@@ -20,7 +20,7 @@ public class Sistema {
     }
 
     //-------------------------------------------------MÉTODO PARA CADASTRAR UM VENDEDOR
-    public static Vendedor cadastrarVendedor(){
+    public static Vendedor cadastrarVendedor() throws Exception{
         String nome = capturarDados("Digite o nome do vendedor: ").nextLine();
         String matricula = capturarDados("Digite a matrícula do vendedor: ").nextLine();
         String email = capturarDados("Digite o e-mail do vendedor: ").nextLine();
