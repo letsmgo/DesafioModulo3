@@ -25,4 +25,14 @@ public class Servico_Cliente {
         return exibirClientes;
     }
 
+    //-----------------------------------MÉTODO PARA VERIFICAR SE O CLIENTE ESTÁ CADASTRADO
+    public static Cliente buscarClientePeloEmail (String cpf) throws Exception{
+        for (Cliente referencia : clientes){
+            if (referencia.getCpf().equalsIgnoreCase(cpf)){
+                return referencia;
+            }
+        }
+        throw new Exception("Não há cliente cadastrado com esse CPF, vamos tentar novamente?");
+    }
+
 }
