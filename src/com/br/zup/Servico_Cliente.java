@@ -14,8 +14,19 @@ public class Servico_Cliente {
         }
     }
 
+    //-----------------------------------MÉTODO PARA VALIDAR SE O CLIENTE JÁ FOI CADASTRADO E NÃO TER DUPLICIDADE
+    public static void verificarDuplicidadeClientes(String cpf) throws Exception{
+        for (Cliente clienteReferencia : clientes) {
+            if (clienteReferencia.getCpf().equalsIgnoreCase(cpf)){
+                throw new Exception("CPF já cadastrado. Você digitou algo errado, vamos tentar novamente?");
+            }
+        }
+    }
+
+
     //-----------------------------------MÉTODO PARA CADASTRAR UM CLIENTE
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception{
+        verificarDuplicidadeClientes(cpf);
         validarEmail(email);
         Cliente cliente = new Cliente(nome, cpf, email);
          clientes.add(cliente);
