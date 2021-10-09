@@ -26,6 +26,22 @@ public class Servico_Venda {
         return exibirVendas;
     }
 
+    //-----------------------------------MÉTODO PARA BUSCAR TODAS AS COMPRAS DE UM CLIENTE  USANDO COMO PARAMETRO CPF
+    public static void exibirComprasCliente (String cpf) throws Exception{
+        List<Venda> vendasDoCliente = new ArrayList<>();
+        for (Venda referencia : vendas){
+            if (referencia.getCliente().getCpf().equals(cpf)){
+                System.out.println(referencia);
+                vendasDoCliente.add(referencia);
+            }
+        }
+        if (vendasDoCliente.size() == 0) {
+            throw new Exception("Não há compras registradas neste CPF");
+        }
+    }
+
+    //-----------------------------------
+
 
 
 }

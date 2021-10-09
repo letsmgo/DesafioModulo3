@@ -40,4 +40,11 @@ public class Sistema {
         return Servico_Venda.cadastrarVenda(cliente, vendedorResponsavel, valorASerPago, dataDeRegistro);
     }
 
+    //-----------------------------------MÉTODO PARA VISUALIZAR TODAS AS COMPRAS DE UM CLIENTE
+    public static void exibirComprasCliente() throws Exception{
+        String cpf = capturarDados("Digite o cpf do cliente que deseja visualizar as compras: ").nextLine();
+        Servico_Venda.exibirComprasCliente(cpf);
+
+    }
+
 }

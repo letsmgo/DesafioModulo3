@@ -32,12 +32,28 @@ public class Venda {
         this.dataDeRegistro = dataDeRegistro;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Vendedor getVendedorResponsavel() {
+        return vendedorResponsavel;
+    }
+
+    public void setVendedorResponsavel(Vendedor vendedorResponsavel) {
+        this.vendedorResponsavel = vendedorResponsavel;
+    }
+
     //---------------------------------------------------toString
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
-        dados.append("\nNome do cliente: " + cliente);
-        dados.append("\nNome do vendedor: " + vendedorResponsavel);
+        dados.append("\n" + cliente);
+        dados.append("\n" + vendedorResponsavel);
         dados.append("\nValor a ser pago: R$" + valorASerPago);
         dados.append("\nData de registro: " + dataDeRegistro);
 
