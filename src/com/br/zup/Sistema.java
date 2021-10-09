@@ -53,4 +53,65 @@ public class Sistema {
         Servico_Venda.exibirVendasVendedor(email);
     }
 
+    //-----------------------------------MÉTODO PARA EXIBIR VENDEDORES
+    public static void exibirVendedores(){
+        System.out.println(Servico_Vendedor.mostrarListaDeVendedores());
+    }
+
+    //-----------------------------------MÉTODO PARA EXIBIR CLIENTES
+    public static void exibirCliente(){
+        System.out.println(Servico_Cliente.motrarListaDeClientes());
+    }
+
+    //-----------------------------------MÉTODO PARA EXIBIR VENDAS
+    public static void exibirVendas(){
+        System.out.println(Servico_Venda.mostrasVendas());
+    }
+
+    //-----------------------------------MÉTODO PARA EXIBIR UM MENU PRINCIPAL PARA O USUÁRIO DO SISTEMA
+    public static void  menuInterativo(){
+        System.out.println("\n| Bem vinde ao Manage Yourself seu gerenciador de vendas!   |");
+        System.out.println("|                                                           | ");
+        System.out.println("|  Digite 1 para cadastrar um vendedor                      |");
+        System.out.println("|  Digite 2 para cadastrar um cliente                       |");
+        System.out.println("|  Digite 3 para cadastrar uma venda                        |");
+        System.out.println("|  Digite 4 para exibir os vendedores cadastrados           |");
+        System.out.println("|  Digite 5 para exibir os cliente cadastrados              |");
+        System.out.println("|  Digite 6 para exibir as vendas gerais                    |");
+        System.out.println("|  Digite 7 para exibir as compras de um cliente            |");
+        System.out.println("|  Digite 8 para exibir as vendas de um vendedor            |");
+        System.out.println("|  Digite 9 para encerrar o Manage Yourself                 |");
+
+
+    }
+
+    public static void executarFuncoes() throws Exception {
+        boolean executarMenu = true;
+
+        while (executarMenu){
+            menuInterativo();
+            int opcaoEscolhida = capturarDados("Digite a opção que deseja executar: ").nextInt();
+            if (opcaoEscolhida == 1){
+                cadastrarVendedor();
+            } else if (opcaoEscolhida == 2){
+                cadastrarCliente();
+            } else if (opcaoEscolhida == 3){
+                cadastrarVenda();
+            } else if (opcaoEscolhida == 4){
+                exibirVendedores();
+            } else if (opcaoEscolhida == 5){
+                exibirCliente();
+            } else if (opcaoEscolhida == 6){
+                exibirVendas();
+            } else if (opcaoEscolhida == 7){
+                exibirComprasCliente();
+            } else if (opcaoEscolhida == 8){
+                exibirVendasVendedor();
+            } else if (opcaoEscolhida == 9){
+                System.out.println("Obrigado por utilizar nosso sistema até a próxima! ");
+                executarMenu = false;
+            }
+        }
+    }
+
 }

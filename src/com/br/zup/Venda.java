@@ -52,6 +52,7 @@ public class Venda {
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
+        dados.append("| VENDAS |");
         dados.append("\n" + cliente);
         dados.append("\n" + vendedorResponsavel);
         dados.append("\nValor a ser pago: R$" + valorASerPago);
