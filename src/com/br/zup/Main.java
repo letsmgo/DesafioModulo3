@@ -12,9 +12,8 @@ public class Main {
             Sistema.cadastrarVenda();
             Sistema.cadastrarVenda();
 
-            System.out.println(Servico_Venda.mostrasVendas());
 
-            Sistema.exibirComprasCliente();
+            Sistema.exibirVendasVendedor();
 
             //System.out.println(Servico_Cliente.motrarListaDeClientes());
            // System.out.println(Servico_Vendedor.mostrarListaDeVendedores());

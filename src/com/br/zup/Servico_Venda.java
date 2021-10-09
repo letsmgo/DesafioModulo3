@@ -36,12 +36,22 @@ public class Servico_Venda {
             }
         }
         if (vendasDoCliente.size() == 0) {
-            throw new Exception("Não há compras registradas neste CPF");
+            throw new Exception("Este cliente ainda não realizou nenhuma compra. ");
         }
     }
 
-    //-----------------------------------
-
-
-
+    //-----------------------------------MÉTODO PARA BUSCAR TODAS AS VENDAS REALIZADAS POR UM VENDEDOR EM ESPECÍFICO
+    public static void exibirVendasVendedor (String email) throws Exception{
+        List<Venda> vendasDoVendedor = new ArrayList<>();
+        for (Venda vendedorReferencia : vendas){
+            if (vendedorReferencia.getVendedorResponsavel().getEmail().equalsIgnoreCase(email)){
+                System.out.println(vendedorReferencia);
+                vendasDoVendedor.add(vendedorReferencia);
+            }
+        }
+        if (vendasDoVendedor.size() == 0) {
+            throw new Exception("Não existe vendas realizadas por este vendedor. ");
+        }
+    }
 }
+

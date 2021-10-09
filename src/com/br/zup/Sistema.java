@@ -47,4 +47,10 @@ public class Sistema {
 
     }
 
+    //-----------------------------------MÉTODO PARA VISUALIZAR TODAS AS VENDAS DE UM VENDEDOR
+    public static void exibirVendasVendedor() throws Exception{
+        String email = capturarDados("Digite o e-mail do vendedor que deseja visualizar as vendas: ").nextLine();
+        Servico_Venda.exibirVendasVendedor(email);
+    }
+
 }
